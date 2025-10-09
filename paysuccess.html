@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 8px 20px; 
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: rgb(5, 62, 81);
+      margin-right: 30px;
+    }
+    .nav-link {
+      margin: 0 15px;
+      font-weight: 500;
+      color: #003849;
+    }
+    .search-wrapper {
+      position: relative;
+    }
+    .search-wrapper i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+    }
+    .search-wrapper input {
+      padding-left: 35px;
+      border-radius: 20px;
+      max-width: 200px;
+    }
+    .buttons button {
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      margin-left: 8px;
+    }
+    .add {
+      height: 40px;
+      width: 120px;
+      background-color: white;
+      border-radius: 9px;
+      font-weight: bold;
+      border: 1px solid #ccc;
+    }
+    .detail button{
+      width: 130px;
+      height: 40px;
+      border: none;
+     font-weight: 500;
+     border-radius:5px;
+    }
+     .payment-box {
+      background: #fff;
+      /* padding: 20px; */
+      border-radius: 8px;
+      /* border: 1px solid #eee; */
+      margin-top: 20px;
+    }
+    .payment-option {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 0;
+      
+    }
+
+    .payment-option input[type="radio"] {
+      accent-color: teal; 
+      transform: scale(1.2); 
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: #004d4d;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .pay-btn:hover {
+      background: #006666;
+    }
+
+    
+    @media(max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fragranzia</a>
+
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="./home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <form class="me-2" role="search">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="form-control" type="search" placeholder="Search Here" aria-label="Search">
+            </div>
+          </form>
+          <div class="buttons d-flex">
+            <button><i class="fa-solid fa-cart-shopping"></i></button>
+            <button><i class="fa-regular fa-bell"></i></button>
+            <button><i class="fa-regular fa-user"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="container my-5">
+    <div class="d-flex gap-4">
+      
+      <div class="border border-2 p-3" style="flex: 0 0 60%;">
+        <div class="d-flex">
+          <div style="width:40%;">
+            <img src="./cart1.png" alt="Perfume" class="img-fluid">
+          </div>
+
+          <div class="ps-4" style="width:60%;">
+            <h4>Autograph eau de parfum 100ml for men</h4>
+            <h6>Autograph 4.5 <i class="fa-solid fa-star" style="color: #7bc261;"></i></h6>
+            <button class="add"> - 1 + </button>
+            <h2>
+              <span style=" font-size: 30px; font-weight: 600;"> Rs 650</span>
+              <span style="font-size: 20px; margin-left: 10px;text-decoration: line-through; color: grey;">Rs 1400</span>
+              <span style="font-size: 20px; margin-left: 10px; color: rgb(32, 132, 59);">61% off</span>
+            </h2>
+            <p>Delivered by August 29, Free delivery <i class="fa-solid fa-truck" style="color: #14161a;"></i></p>
+            <p style="color: rgb(32, 132, 59);">7 day return policy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-2 p-3" style="flex: 0 0 40%;">
+        <h4>Price Details</h4>
+        <div class="row">
+          <div class="col-6">
+            <p>Price (1 item)</p>
+            <p>Discount (61%)</p>
+            <p>Delivery charge</p>
+          </div>
+          <div class="col-6 text-end">
+            <p><b>Rs 899</b> Rs 2000</p>
+            <p><b>Rs 1101</b></p>
+            <p>Free Delivery</p>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Total Amount</span>
+          <span>Rs 899</span>
+        </div>
+      </div>
+      </div>
+     
+      
+<div class="mt-3 d-flex gap-4">
+  <div style="flex: 0 0 60%;">
+    <h3>Personal Details</h3>
+    <div class="detail d-flex flex-row gap-4">
+      <button>Add address</button>
+      <button style="background-color: #024b61; color: white;">Home</button>
+      <button>Office</button>
+    </div>
+
+    <div class="d-flex flex-column mt-3">
+      <h3>Address</h3>
+      <div class="border border-2 p-3">
+        <h4>Rohan Jaison</h4>
+        <p>
+          Apartment No.104, Emerald Heights Opposite Lulu Mall Edappally,<br>
+          Kochi Kerala 682024
+        </p>
+        <p>+91 9876543210</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border border-2 p-3" style="flex: 0 0 40%;">
+  <h3>Payment Methods</h3>
+
+  <label class="payment-option">
+    <span><i class="fa-brands fa-google-pay me-2" style="color:#0077b6;"></i> Google Pay</span>
+    <input type="radio" name="payment" checked>
+  </label>
+
+  <label class="payment-option">
+    <span><i class="fa-solid fa-truck me-2" style="color:#444;"></i> Cash on delivery (Cash/UPI)</span>
+    <input type="radio" name="payment">
+  </label>
+
+  <label class="payment-option">
+    <span><i class="fa-brands fa-amazon me-2" style="color:#ff9900;"></i> Paytm / PhonePe / Amazon Pay</span>
+    <input type="radio" name="payment">
+  </label>
+
+  <label class="payment-option">
+    <span><i class="fa-regular fa-credit-card me-2" style="color:#0a9396;"></i> Credit / Debit Card</span>
+    <input type="radio" name="payment">
+  </label>
+
+  <label class="payment-option">
+    <span><i class="fa-solid fa-building-columns me-2" style="color:#6a4c93;"></i> Net Banking</span>
+    <input type="radio" name="payment">
+  </label>
+
+<button class="pay-btn" data-bs-toggle="modal" data-bs-target="#thankYouModal">
+  Pay Now
+</button>
+</div>
+
+      
+
+    </div>
+  </div>
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4" style="border-radius:12px;">
+        <i class="fa-solid fa-circle-check fa-2xl" style="color: #09d331;"></i>
+      <h3 class="m-3"> Thank You For Ordering!</h3>
+      <p>Your order has been successfully placed.<br>
+    We're Preparing it for shipment.</p>
+<div class="detail d-flex flex-row justify-content-center gap-4">
+  <a href="./home.html" class="btn btn-outline-dark border border-2 border-color">Back to Home</a>
+  <button style="background-color: #024b61; color: white;">Track Order</button>
+</div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 
